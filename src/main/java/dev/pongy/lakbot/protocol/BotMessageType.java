@@ -1,0 +1,17 @@
+package dev.pongy.lakbot.protocol;
+
+public enum BotMessageType {
+    LOG,
+    VERIFY_CREDENTIALS,
+    VERIFY_CREDENTIALS_RESULT,
+    PASSWORD_CHANGED,
+    ACCOUNT_REMOVED,
+    ACCOUNT_ASSIGNED,
+    WORLD_SETTINGS_UPDATED,
+    LOAD_WORLD,
+    START,
+    STOP,
+    START_LIVE,
+    STOP_LIVE,
+    LIVE_STATUS
+}
