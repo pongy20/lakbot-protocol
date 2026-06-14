@@ -32,7 +32,7 @@ After the repo is pushed to `github.com/pongy20/lakbot-protocol` and a tag is cr
 <dependency>
     <groupId>com.github.pongy20</groupId>
     <artifactId>lakbot-protocol</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
 </dependency>
 ```
 
