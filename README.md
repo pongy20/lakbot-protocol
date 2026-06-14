@@ -10,12 +10,15 @@ No Spring, no JPA, no validation dependencies.
 
 ## Scope
 
-- **Included (phase 1 – WebSocket contract):** envelope (`IncomingBotMessage`, `OutgoingBotMessage`),
-  `BotMessageType`, all `*Payload` types, `WorldInfo`, `AccountStatusEntry`, `AccountLiveStatus`,
-  `LogLevel`, and `BotWorldSettingsResponse` (referenced by `AccountAssignedPayload`).
+- **WebSocket contract:** envelope (`IncomingBotMessage`, `OutgoingBotMessage`), `BotMessageType`,
+  all `*Payload` types, `WorldInfo`, `AccountStatusEntry`, `AccountLiveStatus`, `LogLevel`.
+- **Bot-facing REST DTOs:** `BotAccountResponse`, `BotWorldSettingsResponse`, `HabitatResponse`,
+  `TemplateResponse` (+ `TemplateStepResponse`, `BuildingTargetDto`, `KnowledgeTargetDto`,
+  `UnitTargetDto`), and the request DTOs `UpsertHabitatsRequest`, `HabitatEntryRequest`,
+  `SubmitRunLogsRequest`, `LogEntryRequest`.
+- **Shared domain enums:** `HabitatType` (with its code/template-type logic), `TemplateType`.
 - **Not included:** platform→browser SSE DTOs (`LiveLogEvent`, `LiveStatusEvent`) stay in the
-  backend. Pure REST response DTOs (`BotAccountResponse`, `HabitatResponse`, `TemplateResponse`) are
-  documented via the backend OpenAPI spec and are planned for a phase-2 addition here.
+  backend — they are not part of the bot↔platform contract.
 
 ## Consume via JitPack
 
@@ -32,7 +35,7 @@ After the repo is pushed to `github.com/pongy20/lakbot-protocol` and a tag is cr
 <dependency>
     <groupId>com.github.pongy20</groupId>
     <artifactId>lakbot-protocol</artifactId>
-    <version>0.1.2</version>
+    <version>0.2.0</version>
 </dependency>
 ```
 
