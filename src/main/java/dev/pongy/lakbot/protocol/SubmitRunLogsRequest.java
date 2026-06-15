@@ -30,4 +30,6 @@ public class SubmitRunLogsRequest {
     @NotEmpty
     @Valid
     private List<LogEntryRequest> entries;
+
+    private boolean dryRun;
 }

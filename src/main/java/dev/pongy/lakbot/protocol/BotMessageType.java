@@ -14,5 +14,7 @@ public enum BotMessageType {
     STOP,
     START_LIVE,
     STOP_LIVE,
-    LIVE_STATUS
+    LIVE_STATUS,
+    START_DRY_RUN,
+    DRY_RUN_FINISHED
 }
