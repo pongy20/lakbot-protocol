@@ -9,6 +9,7 @@ public enum BotMessageType {
     ACCOUNT_ASSIGNED,
     WORLD_SETTINGS_UPDATED,
     LOAD_WORLD,
+    LOAD_WORLD_RESULT,
     START,
     STOP,
     START_LIVE,
