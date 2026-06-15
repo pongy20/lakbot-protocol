@@ -12,10 +12,11 @@ No Spring, no JPA, no validation dependencies.
 
 - **WebSocket contract:** envelope (`IncomingBotMessage`, `OutgoingBotMessage`), `BotMessageType`,
   all `*Payload` types, `WorldInfo`, `AccountStatusEntry`, `AccountLiveStatus`, `LogLevel`.
-- **Bot-facing REST DTOs:** `BotAccountResponse`, `BotWorldSettingsResponse`, `HabitatResponse`,
-  `TemplateResponse` (+ `TemplateStepResponse`, `BuildingTargetDto`, `KnowledgeTargetDto`,
-  `UnitTargetDto`), and the request DTOs `UpsertHabitatsRequest`, `HabitatEntryRequest`,
-  `SubmitRunLogsRequest`, `LogEntryRequest`.
+- **Bot-facing REST DTOs:** `BotAccountResponse`, `BotWorldSettingsResponse`,
+  `BotWorldDetailResponse` (per-world settings with embedded `HabitatResponse` list),
+  `HabitatResponse`, `TemplateResponse` (+ `TemplateStepResponse`, `BuildingTargetDto`,
+  `KnowledgeTargetDto`, `UnitTargetDto`), and the request DTOs `UpsertHabitatsRequest`,
+  `HabitatEntryRequest`, `SubmitRunLogsRequest`, `LogEntryRequest`.
 - **Shared domain enums:** `HabitatType` (with its code/template-type logic), `TemplateType`.
 - **Not included:** platform→browser SSE DTOs (`LiveLogEvent`, `LiveStatusEvent`) stay in the
   backend — they are not part of the bot↔platform contract.
